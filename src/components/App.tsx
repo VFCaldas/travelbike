@@ -1,5 +1,5 @@
 import { useState } from 'react'
-// import { DatabaseService } from '../services/DatabaseService'
+import { DatabaseService } from '../services/DatabaseService'
 
 import './App.css'
 
@@ -11,10 +11,10 @@ function App() {
   //   teste2: "ASDJAKSDJLK"
   // }, "teste/")
 
-  // let response = DatabaseService.select("teste/")
-  // response.then((value)=>{
-  //   setTexto(JSON.stringify(value.toJSON()))
-  // });
+  let response = DatabaseService.select("teste/")
+  response.then((value)=>{
+    setTexto(JSON.stringify(value.toJSON()))
+  });
 
   return (
     <>
