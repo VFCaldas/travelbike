@@ -4,7 +4,8 @@ import Layout from "../layout/LayoutComponent";
 import Servicos from "../features/servicos/ServicosComponent";
 import Sobre from "../features/sobre/SobreComponent";
 import Login from "../features/login/LoginComponent";
-import RouteAuth from "./RouteAuth";
+import Error404 from "../shared/error404/Error404";
+import { AuthService } from "../../services/AuthService";
 
 /**
  * Component para listar todas as rotas do TravelBike
@@ -12,26 +13,31 @@ import RouteAuth from "./RouteAuth";
 export default function RoutesComponent(){
     
     const router = ReactRouter.createBrowserRouter(
-        ReactRouter.createRoutesFromElements(
-            <ReactRouter.Route element={<Layout/>}>
-                <ReactRouter.Route path="/" element={<ReactRouter.Navigate to={"inicio"}/>}/>
-                <ReactRouter.Route path="inicio" element={<p>Pagina inicial</p>} ></ReactRouter.Route>
-                <ReactRouter.Route path="servicos" element={<Servicos/>} ></ReactRouter.Route>
-                <ReactRouter.Route path="sobre" element={<Sobre/>} ></ReactRouter.Route>
-                <ReactRouter.Route path="contato" element={<p>Pagina de contatos</p>} ></ReactRouter.Route>
-                <ReactRouter.Route path="login" element={<Login/>} ></ReactRouter.Route>
-                <ReactRouter.Route 
-                    path="teste" 
-                    element={
-                        <RouteAuth>
-                            <Servicos/>
-                        </RouteAuth>
-                    } >
-
-                </ReactRouter.Route>
-            </ReactRouter.Route>
-        )
-    );
+        [
+            {
+                element: <Layout/>,
+                children: [
+                    {path:"/", element:<ReactRouter.Navigate to={"inicio"}/>},
+                    {path:"inicio", element:<p>Pagina inicial</p>},
+                    {path:"servicos", element: <Servicos/>, loader: auth},
+                    {path:"sobre", element:<Sobre/>, loader: auth},
+                    {path:"contato", element: <p>Pagina de contatos</p>},
+                    {path:"login", element: <Login/>}
+                ]
+            },
+            {path:"*", element:<Error404/>}
+        ]
+    )
+    
 
     return(<ReactRouter.RouterProvider router={router} />)
+}
+
+async function auth(){
+    const isLogged = await AuthService.isLogged()
+    if (!isLogged) {
+        return ReactRouter.redirect("/login")
+    }
+    alert("usuario não logado")
+    return null
 }

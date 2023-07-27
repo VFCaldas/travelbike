@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import "./Header.css"
+import { AuthService } from "../../../services/AuthService";
 
 export default function Header(){
-    let isLogged: boolean = false
+    const isLogged = false
     
     let link = <Link to={"login"}>login</Link>
     if(isLogged){
@@ -28,6 +29,7 @@ export default function Header(){
                     <Link to={"teste"}>Teste</Link>
                 </li>
             </ul>
+            <button onClick={AuthService.logOut} >LogOut</button>
         </header>
     )
 }

@@ -14,7 +14,7 @@ export class DatabaseService{
 
     public static select(path: string, constraints: FirebaseDB.QueryConstraint[] = []): Promise<FirebaseDB.DataSnapshot>{
 
-        let query: FirebaseDB.Query =FirebaseDB.query(
+        const query: FirebaseDB.Query =FirebaseDB.query(
             FirebaseDB.ref(this.database, path),
             ...constraints
         )

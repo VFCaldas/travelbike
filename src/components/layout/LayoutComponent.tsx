@@ -11,10 +11,10 @@ export default function Layout() {
         <>
             <section>
                 <Header/>
-                <h1>TRAVEL BIKE</h1>
+                <h1 >TRAVEL BIKE</h1>
                 <p>VIVA AVENTURA</p>
             </section>
-            <div id="conteudo">
+            <div id="conteudo" >
                 <Outlet/>
             </div>
             <Footer/>
