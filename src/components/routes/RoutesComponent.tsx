@@ -6,6 +6,7 @@ import Sobre from "../features/sobre/SobreComponent";
 import Login from "../features/login/LoginComponent";
 import Error404 from "../shared/error404/Error404";
 import { AuthService } from "../../services/AuthService";
+import Home from "../features/home/HomeComponent";
 
 /**
  * Component para listar todas as rotas do TravelBike
@@ -18,7 +19,7 @@ export default function RoutesComponent(){
                 element: <Layout/>,
                 children: [
                     {path:"/", element:<ReactRouter.Navigate to={"inicio"}/>},
-                    {path:"inicio", element:<p>Pagina inicial</p>},
+                    {path:"inicio", element:<Home/>},
                     {path:"servicos", element: <Servicos/>, loader: auth},
                     {path:"sobre", element:<Sobre/>, loader: auth},
                     {path:"contato", element: <p>Pagina de contatos</p>},

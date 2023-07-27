@@ -9,11 +9,7 @@ export default function Layout() {
     
     return (
         <>
-            <section>
-                <Header/>
-                <h1 >TRAVEL BIKE</h1>
-                <h2>VIVA AVENTURA</h2>
-            </section>
+            <Header/>
             <div id="conteudo" >
                 <Outlet/>
             </div>

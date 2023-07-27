@@ -1,4 +1,5 @@
 import * as React from "react";
+import * as ReactRouter from "react-router-dom"
 import "./Login.css"
 import { AuthService } from "../../../services/AuthService";
 
@@ -13,12 +14,14 @@ export default function Login(){
             AuthService.createUser(email,senha).then((userCredential)=>{
                 if(userCredential){
                     alert("usuario cadastrado")
+                    ReactRouter.redirect("")
                 }
             })
         }else{
             AuthService.logIn(email, senha).then((userCredential)=>{
                 if(userCredential){
                     alert("usuario logado")
+                    ReactRouter.redirect("")
                 }
             }).catch(()=>{
                 alert("erro ao fazer o login")
@@ -29,7 +32,6 @@ export default function Login(){
 
 
     return(
-        //FIXME: Erro ao fazer login
         <form className="" onSubmit={handleSubmit}>
             <input onChange={(event)=>{
                 setEmail(event.target.value)

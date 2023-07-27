@@ -18,3 +18,24 @@
 h1, h2, h3, h4, h5, h6 {
     font-family: Titillium;
 }
+h1 {
+    font-size: 100px;
+}
+h2 {
+    font-size: 85px;
+}
+h3{
+    font-size: 70px;
+}
+h4 {
+   font-size: 55px;
+}
+h5 {
+    font-size: 40px;
+}
+h6 {
+    font-size: 30px;
+}
+.subtitle{
+    font-size: 20px;
+}

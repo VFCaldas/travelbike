@@ -1,0 +1,12 @@
+.imagem{
+    background-size: cover;
+    background-image: url(../../../assets/images/backgrounds/Capa-Travelbike.png);
+}
+
+.underline-thickness{
+    text-decoration-thickness: 3px;
+}
+
+.underline-offset-20{
+    text-underline-offset: 20px;
+}
