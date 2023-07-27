@@ -12,7 +12,7 @@ export default function Layout() {
             <section>
                 <Header/>
                 <h1 >TRAVEL BIKE</h1>
-                <p>VIVA AVENTURA</p>
+                <h2>VIVA AVENTURA</h2>
             </section>
             <div id="conteudo" >
                 <Outlet/>

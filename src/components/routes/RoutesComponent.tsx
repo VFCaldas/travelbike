@@ -36,8 +36,9 @@ export default function RoutesComponent(){
 async function auth(){
     const isLogged = await AuthService.isLogged()
     if (!isLogged) {
+        alert("usuario não logado")
         return ReactRouter.redirect("/login")
     }
-    alert("usuario não logado")
+    
     return null
 }

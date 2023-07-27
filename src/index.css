@@ -2,10 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
+@font-face {
+    font-family: Open-sans;
+    src: url(./assets/fonts/OpenSans/OpenSans-VariableFont-wdth-wght.ttf);
+}
+@font-face {
+    font-family: Titillium;
+    src: url(./assets/fonts/TitilliumWeb/TitilliumWeb-Light.ttf);
+}
 
-    *{
-        @apply bg-amber-50
-    }
+* {
+    font-family: Open-sans, sans-serif;
+}
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: Titillium;
 }
