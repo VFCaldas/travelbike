@@ -13,7 +13,7 @@ import Home from "../features/home/HomeComponent";
  */
 export default function RoutesComponent(){
     
-    const router = ReactRouter.createBrowserRouter(
+    const router = ReactRouter.createHashRouter(
         [
             {
                 element: <Layout/>,
