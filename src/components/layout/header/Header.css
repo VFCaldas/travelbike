@@ -1,0 +1,11 @@
+@tailwind base;
+
+@layer base {
+    .navbar a{
+        @apply text-white
+    }
+    .navbar a:hover{
+        @apply text-amber-600
+    }
+
+}

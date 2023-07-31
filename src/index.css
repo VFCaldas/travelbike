@@ -13,29 +13,53 @@
 
 * {
     font-family: Open-sans, sans-serif;
+    transition: 0.5s;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: Titillium;
 }
-h1 {
-    font-size: 100px;
-}
-h2 {
-    font-size: 85px;
-}
-h3{
-    font-size: 70px;
-}
-h4 {
-   font-size: 55px;
-}
-h5 {
-    font-size: 40px;
-}
-h6 {
-    font-size: 30px;
-}
-.subtitle{
-    font-size: 20px;
+
+@layer base{
+    * {
+        @apply text-base
+    }
+    .subtitle {
+        @apply text-2xl
+    }
+    
+    a:hover {
+        @apply text-amber-950
+    }
+
+    /*Formulario padrão*/
+    form {
+        @apply bg-black bg-opacity-90;
+    }
+    input {
+        @apply bg-white bg-opacity-90;
+    }
+    input:focus-visible {
+        @apply bg-opacity-60
+    }
+
+    /*Tamanhos padrões para titulos*/
+    h1{
+        @apply text-8xl
+    }
+    h2{
+        @apply text-7xl
+    }
+    h3{
+        @apply text-6xl
+    }
+    h4 {
+        @apply text-5xl
+    }
+    h5{
+        @apply text-4xl
+    }
+    h6{
+        @apply text-3xl
+    }
 }

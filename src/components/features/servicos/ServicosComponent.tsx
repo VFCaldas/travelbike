@@ -1,7 +1,8 @@
 import "./Servicos.css"
 
 export default function Servicos(){
-    console.log("Entrei no componente servicos")
+    document.title = "servicos - TravelBike"
+
     return(
         <p>Pagina de serviços</p>
     )

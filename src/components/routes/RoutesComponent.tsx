@@ -3,7 +3,7 @@ import * as ReactRouter from "react-router-dom";
 import Layout from "../layout/LayoutComponent";
 import Servicos from "../features/servicos/ServicosComponent";
 import Sobre from "../features/sobre/SobreComponent";
-import Login from "../features/login/LoginComponent";
+import Auth from "../features/auth/AuthComponent";
 import Error404 from "../shared/error404/Error404";
 import { AuthService } from "../../services/AuthService";
 import Home from "../features/home/HomeComponent";
@@ -23,7 +23,8 @@ export default function RoutesComponent(){
                     {path:"servicos", element: <Servicos/>, loader: auth},
                     {path:"sobre", element:<Sobre/>, loader: auth},
                     {path:"contato", element: <p>Pagina de contatos</p>},
-                    {path:"login", element: <Login/>}
+                    {path:"login", element: <Auth tipo={"login"} />, },
+                    {path:"cadastrar", element: <Auth tipo={"cadastrar"} />}
                 ]
             },
             {path:"*", element:<Error404/>}
