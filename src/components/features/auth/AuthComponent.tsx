@@ -1,13 +1,15 @@
 import * as React from "react";
 import * as ReactRouter from "react-router-dom"
+import Modal from "react-modal";
 import "./Auth.css"
 import { AuthService } from "../../../services/AuthService";
 
-export default function Auth({tipo}: any){
+export default function Auth({tipo, children}: any){
     document.title = `${tipo} - TravelBike`
 
     const [email, setEmail] = React.useState('')
     const [senha, setSenha] = React.useState('')
+    const [isOpenModal, setIsOpenModal] = React.useState(false)
 
     async function handleSubmit(event: React.FormEvent) {
         event.preventDefault()
@@ -34,7 +36,13 @@ export default function Auth({tipo}: any){
 
     return(
         <>
-            <section className="w-full h-screen imagem">
+            <Modal 
+                isOpen={isOpenModal}
+                className=""
+                overlayClassName=""
+                portalClassName=""
+            >
+                <h4>{tipo}</h4>
                 <form className="absolute bottom-2/4 right-2/4 translate-x-2/4 translate-y-1/4 text-center text-white" onSubmit={handleSubmit}>
                     <input onChange={(event)=>{
                         setEmail(event.target.value)
@@ -48,7 +56,8 @@ export default function Auth({tipo}: any){
 
                     <input type="submit" value="cadastrar" />
                 </form>
-            </section>
+            </Modal>
+            <button onClick={()=>{setIsOpenModal(!isOpenModal)}}>{children}</button>
         </>
     )
 }

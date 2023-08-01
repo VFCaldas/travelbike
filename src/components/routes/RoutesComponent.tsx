@@ -23,8 +23,6 @@ export default function RoutesComponent(){
                     {path:"servicos", element: <Servicos/>, loader: auth},
                     {path:"sobre", element:<Sobre/>, loader: auth},
                     {path:"contato", element: <p>Pagina de contatos</p>},
-                    {path:"login", element: <Auth tipo={"login"} />, },
-                    {path:"cadastrar", element: <Auth tipo={"cadastrar"} />}
                 ]
             },
             {path:"*", element:<Error404/>}
