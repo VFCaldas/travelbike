@@ -1,0 +1,27 @@
+name: Boas praticas eslint
+on: 
+    push:
+    workflow_dispatch:
+
+jobs:
+    
+    eslint-verify:
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+              node-version: [18.x]
+      
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+      
+              #define que se deve usar o NODEJS para os proximo "runs"
+            - name: Use Node.js ${{matrix.node-version}}
+              uses: actions/setup-node@v2
+              with:
+                node-version: ${{matrix.node-version}}
+            - name: eslint verify
+              run: |
+                npm i
+                npm run lint
