@@ -11,6 +11,10 @@
     src: url(./assets/fonts/TitilliumWeb/TitilliumWeb-Light.ttf);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     font-family: Open-sans, sans-serif;
     transition: 0.5s;
@@ -19,6 +23,10 @@
 h1, h2, h3, h4, h5, h6 {
     font-family: Titillium;
 }
+.sans-font{
+    font-family: Open-sans;
+}
+
 
 @layer base{
     * {
@@ -28,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
         @apply text-2xl
     }
     
-    a:hover {
+    .link:hover {
         @apply text-amber-950
     }
 
@@ -62,4 +70,16 @@ h1, h2, h3, h4, h5, h6 {
     h6{
         @apply text-3xl
     }
+}
+
+.btn-tb {
+    background-image: linear-gradient(180deg, #222 0%, #000 100%);
+    border-radius: 8px;
+    padding: 16px ;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+.btn-tb:hover {
+    background-image: linear-gradient(180deg, #222 50%, #000 100%);
 }

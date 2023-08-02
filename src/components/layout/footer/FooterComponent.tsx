@@ -19,13 +19,13 @@ export default function Footer(){
                     <p className="subtitle mb-7">Serviços</p>
                     <ul>
                         <li className="mb-6">
-                            <Link  to={"/login"}>login</Link>
+                            <Link className="link" to={"/login"}>login</Link>
                         </li>
                         <li className="mb-6">
-                            <Link  to={"/cadastrar"}>cadastrar</Link>
+                            <Link className="link" to={"/cadastrar"}>cadastrar</Link>
                         </li>
                         <li className="mb-6">
-                            <Link  to={"/servicos/inventario"}>inventario</Link>
+                            <Link className="link" to={"/servicos/inventario"}>inventario</Link>
                         </li>
                     </ul>
                 </div>
@@ -33,10 +33,10 @@ export default function Footer(){
                     <p className="subtitle mb-7">Sobre</p>
                     <ul>
                         <li className="mb-6">
-                            <Link  to={"/sobre/comunidade"}>Comunidade</Link>
+                            <Link className="link" to={"/sobre/comunidade"}>Comunidade</Link>
                         </li>
                         <li className="mb-6">
-                            <Link  to={"/sobre/seja-colaborador"}>Seja um colaborador</Link>
+                            <Link className="link" to={"/sobre/seja-colaborador"}>Seja um colaborador</Link>
                         </li>
                     </ul>
                 </div>
@@ -44,13 +44,13 @@ export default function Footer(){
                     <p className="subtitle mb-7">Contato</p>
                     <ul>
                         <li className="mb-6">
-                            <Link  to={"/contatos"}>Contate-nos</Link>
+                            <Link className="link" to={"/contatos"}>Contate-nos</Link>
                         </li>
                         <li className="mb-6">
-                            <Link  to={"/contatos#termos"}>Termos</Link>
+                            <Link className="link" to={"/contatos#termos"}>Termos</Link>
                         </li>
                         <li className="mb-6">
-                            <Link  to={"/contatos#privacidade"}>Políticas de privacidade</Link>
+                            <Link className="link" to={"/contatos#privacidade"}>Políticas de privacidade</Link>
                         </li>
                     </ul>
                 </div>

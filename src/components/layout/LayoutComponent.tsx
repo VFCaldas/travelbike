@@ -10,7 +10,7 @@ export default function Layout() {
     return (
         <>
             <Header/>
-            <div id="conteudo" >
+            <div id="conteudo" className="relative" >
                 <Outlet/>
             </div>
             <Footer/>

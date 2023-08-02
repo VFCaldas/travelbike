@@ -4,7 +4,7 @@ import Modal from "react-modal";
 import "./Auth.css"
 import { AuthService } from "../../../services/AuthService";
 
-export default function Auth({tipo, children}: any){
+export default function Auth({tipo, children, className}: any){
     document.title = `${tipo} - TravelBike`
 
     const [email, setEmail] = React.useState('')
@@ -57,7 +57,7 @@ export default function Auth({tipo, children}: any){
                     <input type="submit" value="cadastrar" />
                 </form>
             </Modal>
-            <button onClick={()=>{setIsOpenModal(!isOpenModal)}}>{children}</button>
+            <button className={className} onClick={()=>{setIsOpenModal(!isOpenModal)}}>{children}</button>
         </>
     )
 }

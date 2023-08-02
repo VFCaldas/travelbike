@@ -6,14 +6,14 @@ import Auth from "../../features/auth/AuthComponent";
 export default function Header(){
     const isLogged = false
     
-    const link = <Auth tipo={"login"} >Login</Auth>                
+    const link = <Auth tipo={"login"} className="text-2xl" >Login</Auth>                
 
     // if(isLogged){
     //     link = <Link className="text-2xl" to={"perfil"}>nome do usuario</Link>
     // }
     
     return(
-        <header className="absolute top-0 w-full flex justify-end text-white px-10 py-8 text-2xl">
+        <header className="absolute top-0 w-full flex justify-end text-white px-10 py-8 text-2xl z-50">
             <ul className="flex justify-between navbar">
                 <li className="mx-3.5">
                     <Link className="text-2xl" to={"inicio"}>Inicio</Link>

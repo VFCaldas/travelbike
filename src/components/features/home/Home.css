@@ -1,12 +1,20 @@
-.imagem{
+.imagem-homepage{
     background-size: cover;
     background-image: url(../../../assets/images/backgrounds/Capa-Travelbike.png);
 }
-
-.underline-thickness{
-    text-decoration-thickness: 3px;
+.bg-imagem-BMW {
+    background-size: cover;
+    background-image: url(../../../assets/images/general/BMW-MOTO.png);
 }
-
-.underline-offset-20{
-    text-underline-offset: 20px;
+.bg-imagem-TRIUMPH {
+    background-size: cover;
+    background-image: url(../../../assets/images/general/TRIUMPH-MOTO.png);
+}
+.bg-imagem-HD {
+    background-size: cover;
+    background-image: url(../../../assets/images/general/HD-MOTO.png);
+}
+.bg-imagem-HONDA {
+    background-size: cover;
+    background-image: url(../../../assets/images/general/HONDA-MOTO.png);
 }
