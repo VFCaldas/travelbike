@@ -3,7 +3,9 @@ import imgSection2 from "../../../assets/images/general/img-2-section-homepage.p
 import motorCycle from "../../../assets/images/icons/motorcycle.svg"
 import calendar from "../../../assets/images/icons/calendar.svg";
 import map from "../../../assets/images/icons/map.svg";
-import iconeCTA from "../../../assets/images/icons/IconeCTA.svg";
+import IconeCTA from "../../../assets/images/icons/IconeCTA";
+
+import { Link } from "react-router-dom";
 
 export default function Home(){
     document.title = "TravelBike"
@@ -42,29 +44,29 @@ export default function Home(){
                 </div>
             </section>
             <section className="flex justify-around" >
-                <div className="w-[24%] h-3/5 bg-imagem-BMW" >
+                <div className="w-[24%] h-[60vh] bg-imagem-BMW card-moto" >
                     <h5 className="sans-font font-bold" >BMW</h5>
-                    <a href="">
-                        <img src={iconeCTA} alt="BMW" />
-                    </a>
+                    <Link to="/servicos">
+                        <IconeCTA />
+                    </Link>
                 </div>
-                <div className="w-[24%] h-3/5 bg-imagem-TRIUMPH" >
+                <div className="w-[24%] h-[60vh] bg-imagem-TRIUMPH card-moto" >
                     <h5 className="sans-font font-bold" >TRIUMPH</h5>
-                    <a href="">
-                        <img src={iconeCTA} alt="" />
-                    </a>
+                    <Link to="/servicos">
+                        <IconeCTA />
+                    </Link>
                 </div>
-                <div className="w-[24%] h-3/5 bg-imagem-HD" >
-                    <h5 className="sans-font font-bold" >HARLEY DAVIDSON</h5>
-                    <a href="">
-                        <img src={iconeCTA} alt="" />
-                    </a>
+                <div className="w-[24%] h-[60vh] bg-imagem-HD card-moto" >
+                    <h5 className="sans-font font-bold" >HARLEY <div className="font-bold text-4xl ml-10" >DAVIDSON</div></h5>
+                    <Link to="/servicos">
+                        <IconeCTA />
+                    </Link>
                 </div>
-                <div className="w-[24%] h-3/5 bg-imagem-HONDA" >
+                <div className="w-[24%] h-[60vh] bg-imagem-HONDA card-moto" >
                     <h5 className="sans-font font-bold" >HONDA</h5>
-                    <a href="">
-                        <img src={iconeCTA} alt="" />
-                    </a>
+                    <Link to="/servicos">
+                        <IconeCTA />
+                    </Link>
                 </div>
             </section>
         </>

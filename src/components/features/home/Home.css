@@ -18,3 +18,19 @@
     background-size: cover;
     background-image: url(../../../assets/images/general/HONDA-MOTO.png);
 }
+
+.card-moto {
+    position: relative;
+}
+.card-moto > h5 {
+    margin: 6.25% 0 0 9.3%;
+    color: white;
+}
+.card-moto > a {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+#Circle:hover {
+    fill: #F59E0B;
+}
